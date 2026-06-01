@@ -167,23 +167,21 @@ a:hover{color:#f09228;cursor:pointer}
             </div>
         <div id="main-pub-container">
 
-              <h5 class="subtitle" style="margin-top:0px"> Publications and Manuscripts 
-                (<a id="publication-by-date" href="javascript:;", onClick="publicationByDate();">By Years</a> /
-                <a id="publication-by-selected" href="javascript:;", onClick="publicationBySelected();">Selected</a>)
-            </h5>
+                            <h5 class="subtitle" style="margin-top:0px"> Publications and Manuscripts</h5>
+                        <p style="margin: 4px 0 12px; font-size: 14px;">(* indicates equal contribution.)</p>
             <div id="main-pub-card-container" class="activated hide">
                   <div class="pub-card" data-topic="Continual Learning" data-year="2026" data-selected="true">
                     <div class="row">
                         <!-- <div class="col-r col-xs-12 col-lg-9"> -->
                             <div class="pub-card-body ">
-                                <h5 class="title">Towards Self-Adaptive Learning: Continual Learning under Harsh Conditions</h5>
+                                <h5 class="title">Towards Self-Adaptive Learning: A Comprehensive Study on Continual Learning under Harsh Conditions</h5>
                                 <h6 class="authors">
                                   Roozbeh Razavi-Far, Ehsan Hallaji, Alireza Fathalizadeh, <u>Mengxi Wu</u>, Mohammad Rostami
                                 </h6>
                                 <p class="info">
-                                    <span class="conference"><em>Neurocomputing, 2026</em></span>
+                                    <span class="conference"><em>Neurocomputing 2026</em></span>
                                 </p>
-                                <p><a href="https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176948359.91255526/v1">[Paper]</a></p>
+                                <p><a href="https://d197for5662m48.cloudfront.net/documents/publicationstatus/303375/preprint_pdf/e587b20693774e0cd2a8339cc186dcfd.pdf">[Paper]</a></p>
     
                             </div>
                         <!-- </div> -->
@@ -194,7 +192,7 @@ a:hover{color:#f09228;cursor:pointer}
                     <div class="row">
                         <!-- <div class="col-r col-xs-12 col-lg-9"> -->
                             <div class="pub-card-body ">
-                                <h5 class="title">GQA-μP: The maximal parameterization update for grouped query attention</h5>
+                                <h5 class="title">GQA-μP: The Maximal Parameterization Update for Grouped Query Attention</h5>
                                 <h6 class="authors">
                                   Kyle R. Chickering*, Huijuan Wang*, <u>Mengxi Wu</u>*, Alexander Moreno, Muhao Chen, Xuezhe Ma, Daria Soboleva, Joel Hestness, Zhengzhong Liu, Eric Xing
                                 </h6>
@@ -236,7 +234,7 @@ a:hover{color:#f09228;cursor:pointer}
                                     Mohammad Rostami
                                 </h6>
                                 <p class="info">
-                                    <span class="conference"><em>Transactions on Machine Learning Research, 2025</em></span>
+                                    <span class="conference"><em>Transactions on Machine Learning Research 2025</em></span>
                                 </p>
                                 <p><a href="https://openreview.net/forum?id=ePXWnH7rGk&referrer">[Paper]</a>
                                   <a href="https://github.com/WMX567/CurvRec_DNWD">[Code]</a></p>
@@ -254,7 +252,7 @@ a:hover{color:#f09228;cursor:pointer}
                                     Mohammad Rostami
                                 </h6>
                                 <p class="info">
-                                    <span class="conference"><em>Transactions on Machine Learning Research, 2024</em></span>
+                                    <span class="conference"><em>Transactions on Machine Learning Research 2024</em></span>
                                 </p>
                                 <p><a href="https://openreview.net/pdf?id=CSv7GgKHb6">[Paper]</a>  
                                     <a href="https://github.com/WMX567/GraphHarmony">[Code]</a></p>
@@ -273,7 +271,7 @@ a:hover{color:#f09228;cursor:pointer}
                                     Christopher Musco
                                 </h6>
                                 <p class="info">
-                                    <span class="conference"><em>Eurographics/IEEE Conference on Visualization, 2022</em></span>
+                                    <span class="conference"><em>Eurographics/IEEE Conference on Visualization 2022</em></span>
                                 </p>
                                 <p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.14542">[Paper]</a>  
                                     <a href="https://github.com/WMX567/streamAlgoEuroVis22">[Code]</a></p>
@@ -292,7 +290,7 @@ a:hover{color:#f09228;cursor:pointer}
                                 Yi Fang
                             </h6>
                             <p class="info">
-                                <span class="conference"><em>International Conference on Pattern Recognition, 2022</em></span>
+                                <span class="conference"><em>International Conference on Pattern Recognition 2022</em></span>
                             </p>
                             <p><a href="https://ieeexplore.ieee.org/document/9956045">[Paper]</a>  
                                 <a href="https://github.com/WMX567/3DPointCloudGeoAug">[Code]</a></p>
@@ -305,10 +303,10 @@ a:hover{color:#f09228;cursor:pointer}
 </div>
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr>
-      <td style="padding:20px;width:25%;vertical-align:middle">
+            <td style="padding:0;width:100%;vertical-align:middle">
         <br>
-        <p style="text-align:left;font-size:small;">
-        <a href="https://jiayuanm.com/"style="font-size: small;text-decoration: none">Website template from Jiayuan Mao</a>. Last updated: Jan 2026.
+                <p style="text-align:left;font-size:small;margin:0;">
+        <a href="https://jiayuanm.com/"style="font-size: small;text-decoration: none">Website template</a>. Last updated: June 2026.
         </p>
       </td>
     </tr>
@@ -335,23 +333,6 @@ function playAllVideos() {
     this.play();
   });
 }
-function publicationBySelected() {
-    var a = $("#publication-by-selected")
-    if (a.hasClass("activated")) {
-        return ;
-    }
-    $("#main-pub-container .subtitle a").removeClass("activated");
-    $("#main-pub-container .subtitle-aux a").removeClass("activated");
-    a.addClass("activated");
-    $("#main-pub-card-container").html("");
-    for (var pubId = 0; pubId < allPublications.length; pubId++) {
-        var pub = $(allPublications[pubId]);
-        if (pub.data("selected") == true) {
-            $("#main-pub-card-container").append(pub);
-        }
-    }
-    playAllVideos();
-}
 function publicationByDate() {
     var a = $("#publication-by-date")
     if (a.hasClass("activated")) {
@@ -362,10 +343,6 @@ function publicationByDate() {
     a.addClass("activated");
     $("#main-pub-card-container").html("");
     for (var pubId = 0; pubId < allPublications.length; pubId++) {
-        if (pubId == 0 || $(allPublications[pubId-1]).data("year") != $(allPublications[pubId]).data("year")) {
-            var year = $(allPublications[pubId]).data("year");
-            $("#main-pub-card-container").append($("<h5 id='year-" + year.toString() + "'>" + year.toString() + "</h5>"));
-        }
         $("#main-pub-card-container").append(allPublications[pubId]);
     }
     playAllVideos();
@@ -520,8 +497,7 @@ $(function() {
     for (var topicId = 0; topicId < allTopicsLink.length; topicId++) {
         allTopics.push({name: $(allTopicsLink[topicId]).data("topic"), title: $(allTopicsLink[topicId]).html()});
     }
-    $("#publication-by-selected").click();
-    // $("#publication-by-date").click();
+    publicationByDate();
     $("#main-pub-card-container").removeClass("hide");
 });
 </script>
