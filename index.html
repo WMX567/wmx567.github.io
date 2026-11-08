@@ -63,8 +63,16 @@ a:hover{color:#f09228;cursor:pointer}
 #main-info-container .col-name .text{text-align:left}
 #main-info-container .col-name .name{margin:0;color:#3d6688;font-size:1.85em;font-family:"Source Sans Pro",Helvetica,sans-serif}
 #main-info-container .col-name .email{color:#666; font-size:13px}
-#main-info-container .col-name .email a{color:#666; font-size:14px}
+#main-info-container .col-name .email a{color:#666; font-size:15px}
 #main-info-container .col-name .email .link-separator{display:inline-block;border-left:1.5px solid #ccc;height:1.1em;margin:0 5px;vertical-align:middle;transform:translateY(-1px)}
+#main-info-container .col-name .profile-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 0;margin:4px 0 16px;line-height:1.5}
+#main-info-container .col-name .profile-text-links{display:inline-flex;align-items:center;gap:6px}
+#main-info-container .col-name .profile-text-links .link-separator{margin:0;height:18px;transform:none;border-left:1px solid #888}
+#main-info-container .col-name .profile-social-links{display:inline-flex;align-items:center;gap:5px;padding-left:6px}
+#main-info-container .col-name .profile-social-links a{display:inline-flex;align-items:center;justify-content:center;height:28px;font-size:22px;text-decoration:none}
+#main-info-container .col-name .profile-links a:hover{color:#3d6688}
+#main-info-container .col-name .profile-links a:focus-visible{outline:2px solid #3d6688;outline-offset:3px;border-radius:2px}
+@media (min-width:768px){#main-info-container .col-name .profile-links{justify-content:flex-start}}
 #main-info-container .col-link{text-align:center;margin:-5px 0 -25px;}
 #main-info-container .col-link ul {margin:0px auto auto;padding:0;list-style:none;text-align:center}
 #main-info-container .col-link li {display:inline-block;margin:auto;padding:0 10px;color:#ccc;line-height:10px}
@@ -77,12 +85,18 @@ a:hover{color:#f09228;cursor:pointer}
 .main-more-container{width:100%;padding:0 30px}
 .main-bio-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px;font-size:1rem;line-height:1.4}
 .main-bio-container .subtitle{margin-top:0px;font-size:23px;color:#3d6688}
+.misc-notes{color:#000;line-height:1.6}
+.misc-notes small{color:#777}
 .toggle-overview {background:#fafcff;display:block;text-align:center;padding:5px;color:#566c7f;font-weight:500}
 .toggle-overview:hover {text-decoration:none}
 /* @media (max-width: 560px) {section.overview {display:none}} */
 .thick>p {font-size: 1rem}
 .thick>p>a, .think>p>a:hover {background:#fafcff;display:block;text-align:center;padding:5px;color:#566c7f;font-weight:500;text-decoration:none}
 #main-pub-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px}
+.main-bio-container.section-separated,
+#main-pub-container.section-separated{border-top:1px solid #d5d5d5;margin-top:24px;padding-top:24px}
+.main-bio-container.section-separated>p:last-child{margin-bottom:0}
+.footer-divider{border:0;border-top:1px solid #d5d5d5;margin:24px 0 0}
 #main-pub-container .subtitle{font-size:23px;color:#3d6688;}
 #main-pub-container .subtitle a {font-size:21px; color:#3d6688;; font-weight:400}
 #main-pub-container .subtitle a.activated {color:#333333; font-weight:600}
@@ -145,14 +159,19 @@ a:hover{color:#f09228;cursor:pointer}
                         <!-- <div class="profile-rabbit" style="bottom:-100px;right:-200px;position:absolute"><img src="static/img/rabbit.png" width=200px; height="200px" /></div> -->
                         <div class="col-name">
                             <h1 class="name"><span>Mengxi Wu 武梦溪</span></h1>
-                            <p class="email">
-                                                                <a href="https://scholar.google.com/citations?user=vVpwClsAAAAJ&hl=en&oi=sra">Google Scholar</a> <span class="link-separator" aria-hidden="true"></span>
-                                <a href="https://github.com/WMX567">Github</a>
-                                                                <span class="link-separator" aria-hidden="true"></span>
-                                <a href="CV.pdf">CV</a>
-                                                                <span class="link-separator" aria-hidden="true"></span>
-                                <a href="miscs.html">Misc.</a>
-                              </p>
+                            <nav class="email profile-links" aria-label="Profile links">
+                                <span class="profile-text-links">
+                                    <a href="https://scholar.google.com/citations?user=vVpwClsAAAAJ&hl=en&oi=sra">Google Scholar</a>
+                                    <span class="link-separator" aria-hidden="true"></span>
+                                    <a href="CV.pdf">CV</a>
+                                    <span class="link-separator" aria-hidden="true"></span>
+                                </span>
+                                <span class="profile-social-links">
+                                    <a href="https://github.com/WMX567" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
+                                    <a href="https://x.com/MengxiWu567" aria-label="Twitter (X)" title="Twitter (X)" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/wumxi567/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </span>
+                            </nav>
                             <p class="text">I am a Ph.D. Candidate in the <a href="https://www.cs.usc.edu/">Department of Computer Science</a> at the <a href="https://www.usc.edu/">University of Southern California</a>, advised by <a href="https://xuezhemax.github.io/">Prof. Xuezhe Ma</a>. I received my Master of Science in Computer Science from <a href="https://www.nyu.edu/">New York University</a>, where I was advised by <a href="https://engineering.nyu.edu/faculty/yi-jen-chiang">Prof. Yi-Jen Chiang</a>, <a href="https://engineering.nyu.edu/faculty/christopher-musco">Prof. Christopher Musco</a>, and <a href="https://engineering.nyu.edu/faculty/yi-fang">Prof. Yi Fang</a>. Before that, I was an undergraduate student in <a href="https://eecs.engin.umich.edu/">EECS</a> at the <a href="https://umich.edu/">University of Michigan, Ann Arbor</a>.
                              <p>
                         </div>
@@ -171,34 +190,17 @@ a:hover{color:#f09228;cursor:pointer}
                 <li>✈️✈️✈️ I'll be attending <a href="https://neurips.cc/">NeurIPS 2026</a> in Atlanta in December. Come say hi!</li>
             </ul>
         </section>
-        <div class="main-bio-container">
+        <div class="main-bio-container section-separated">
             
             <h5 class="subtitle" style="margin-top:0px">Research</h5>
             <p>My research focuses on improving the efficiency of large language model (LLM) pre-training. I work on methods that scale from small proxy models to large foundation models, as well as the mathematical principles underlying training dynamics. I work on hyperparameter optimization, especially transferring hyperparameter configurations from small models to large-scale models. In particular, I study scaling-aware parameterizations such as maximum update parametrization (μP). I also study optimizers for large-scale training. Previously, I worked on transfer learning with theoretical guarantees, adversarial machine learning for 3D point cloud models, and streaming algorithms for time-varying volume data.</p>
             </div>
         <div id="main-pub-container">
 
-                            <h5 class="subtitle" style="margin-top:0px"> Publications and Manuscripts</h5>
-                        <p style="margin: 4px 0 12px; font-size: 14px;">(* indicates equal contribution.)</p>
+                            <h5 class="subtitle" style="margin-top:0px">Selected Recent Publications</h5>
+                        <p style="margin: 4px 0 12px; font-size: 14px;">For the full publication list, please refer to <a href="https://scholar.google.com/citations?user=vVpwClsAAAAJ&hl=en&oi=sra">Google Scholar</a>. (* indicates equal contribution.)</p>
             <div id="main-pub-card-container" class="activated hide">
                         <div class="pub-list-group">
-                  <div class="pub-card" data-topic="Optimization" data-year="2026" data-selected="true">
-                    <div class="row">
-                        <!-- <div class="col-r col-xs-12 col-lg-9"> -->
-                            <div class="pub-card-body ">
-                                <h5 class="title">GQA-μP: The Maximal Parameterization Update for Grouped Query Attention</h5>
-                                <h6 class="authors">
-                                  Kyle R. Chickering*, Huijuan Wang*, <u>Mengxi Wu</u>*, Alexander Moreno, Muhao Chen, Xuezhe Ma, Daria Soboleva, Joel Hestness, Zhengzhong Liu, Eric Xing
-                                </h6>
-                                <p class="info">
-                                    <span class="conference"><em>Preprint</em></span>
-                                </p>
-                                <p><a href="https://arxiv.org/abs/2605.15290">[Paper]</a></p>
-    
-                            </div>
-                        <!-- </div> -->
-                    </div>
-                </div>
                  <div class="pub-card" data-topic="LLM" data-year="2026" data-selected="true">
                     <div class="row">
                         <!-- <div class="col-r col-xs-12 col-lg-9"> -->
@@ -271,53 +273,23 @@ a:hover{color:#f09228;cursor:pointer}
                         <!-- </div> -->
                     </div>
                 </div>
-                <div class="pub-card" data-topic="time-series" data-year="2022" data-selected="true">
-                    <div class="row">
-                        <!-- <div class="col-r col-xs-12 col-lg-9"> -->
-                            <div class="pub-card-body ">
-                                <h5 class="title">Streaming Approach to In Situ Selection of Key Time Steps for Time-Varying Volume Data</h5>
-                                <h6 class="authors">
-                                    <u>Mengxi Wu</u>,
-                                    Yi-Jen Chiang,
-                                    Christopher Musco
-                                </h6>
-                                <p class="info">
-                                    <span class="conference"><em>Eurographics/IEEE Conference on Visualization 2022</em></span>
-                                </p>
-                                <p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.14542">[Paper]</a>  
-                                    <a href="https://github.com/WMX567/streamAlgoEuroVis22">[Code]</a></p>
-                            </div>
-                        <!-- </div> -->
-                    </div>
-                </div>
-            <div class="pub-card" data-topic="point-cloud" data-year="2022" data-selected="true">
-                <div class="row">
-                    <!-- <div class="col-r col-xs-12 col-lg-9"> -->
-                        <div class="pub-card-body ">
-                            <h5 class="title">3D Point Cloud Completion with Geometric-Aware Adversarial Augmentation</h5>
-                            <h6 class="authors">
-                                <u>Mengxi Wu</u>,
-                                Hao Huang,
-                                Yi Fang
-                            </h6>
-                            <p class="info">
-                                <span class="conference"><em>International Conference on Pattern Recognition 2022</em></span>
-                            </p>
-                            <p><a href="https://ieeexplore.ieee.org/document/9956045">[Paper]</a>  
-                                <a href="https://github.com/WMX567/3DPointCloudGeoAug">[Code]</a></p>
-                        </div>
-                    <!-- </div> -->
-                </div>
-            </div>
+
     </div>
     </div>
 </div>
+<section class="main-bio-container misc-notes section-separated" aria-labelledby="misc-title">
+    <h5 class="subtitle" id="misc-title">Misc.</h5>
+    <p>Math study takes a majority of time. One topic I really like comes from Math 525b. It gives a flavor of functional analysis. I wrote and maintain a set of notes:</p>
+    <p><a href="static/notes/notes_on_functional_analysis.pdf" target="_blank" rel="noopener noreferrer">Notes on Functional Analysis</a> <small>(updated 6/27/2026)</small></p>
+    <p>It’s a bit long, but I hope it could be helpful in some way. Feel free to let me know if you spot any errors. I passed my <a href="https://dornsife.usc.edu/mathematics/graduate-exams/" target="_blank" rel="noopener noreferrer">Math Qualifying Exam</a> in Probability, and wish me luck on the Analysis and Algebra exams!</p>
+</section>
+<hr class="footer-divider">
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr>
             <td style="padding:0;width:100%;vertical-align:middle">
         <br>
                 <p style="text-align:left;font-size:small;margin:0;">
-        <a href="https://jiayuanm.com/"style="font-size: small;text-decoration: none">Website template</a>. Last updated: November 2026.
+        <a href="https://jiayuanm.com/"style="font-size: small;text-decoration: none">Website template</a>. Last updated: November 8, 2026.
         </p>
       </td>
     </tr>
